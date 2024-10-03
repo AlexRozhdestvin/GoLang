@@ -1,0 +1,8 @@
+app_port: "8000"
+
+db:
+  host: "localhost"
+  port: "5400"
+  username: "user"
+  db_name: "todo_list"
+  ssl_mode: "disable"
