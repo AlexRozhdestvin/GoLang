@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package proto;
+option go_package = ".;proto"; // Текущая директория с именем пакета proto
+// Сервис
+service userService {
+  // Метод gRPC
+  rpc GetUserById (GetUserRequest) returns (GetUserResponse);
+}
+
+// Запрос
+message GetUserRequest {
+  string id = 1;
+}
+
+// Ответ
+message GetUserResponse {
+  string id = 1;
+  string name = 2;
+  uint32 age= 3;
+}
